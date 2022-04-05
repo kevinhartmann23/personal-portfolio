@@ -39,8 +39,9 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+## ESLint
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Linting rules follow AirBnb rules, with a few additional rules. Before committing, Husky will run ESLint Check (prompting ESLint check) to ensure proper code styling before commits.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+`npm run lint:check`
+`npm run lint:fix`
