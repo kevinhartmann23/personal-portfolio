@@ -25,5 +25,5 @@ jobs:
 
       # run tests!
       - run: npm test
-      - run: npm lint
+      - run: npm tslint \"src/**/*.{ts,tsx}\"
       - run: npm build
