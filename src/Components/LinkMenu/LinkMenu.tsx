@@ -12,6 +12,8 @@ import ShareIcon from '@mui/icons-material/Share'
 
 const Spacer = styled(Box)({
   height: '50%',
+  display: 'flex',
+  flexDirection: 'column',
 })
 
 const SpeedDialContainer = styled(Box)({
@@ -32,7 +34,7 @@ const LinkMenu = () => {
   const [fabIcon, setFabIcon] = useState(<PhonelinkIcon />)
 
   return (
-    <Box sx={{ height: '100%', width: '20%' }}>
+    <Box sx={{ height: '100%', width: '10%', marginRight: '2rem' }}>
       <SpeedDialContainer>
         <SpeedDial
           ariaLabel="Social Media Links for Kevin Hartmann"

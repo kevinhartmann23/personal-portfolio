@@ -3,14 +3,17 @@ import './index.css'
 import App from './Components/App/App'
 import { ThemeProvider } from '@mui/material/styles'
 import { CssBaseline } from '@mui/material'
+import { BrowserRouter } from 'react-router-dom'
 import reportWebVitals from './reportWebVitals'
 import theme from './theme'
 
 ReactDOM.render(
-  <ThemeProvider theme={theme}>
-    <CssBaseline />
+  <BrowserRouter>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
       <App />
-  </ThemeProvider>,
+    </ThemeProvider>
+  </BrowserRouter>,
   document.getElementById('root')
 )
 
