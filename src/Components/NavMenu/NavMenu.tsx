@@ -10,17 +10,6 @@ import ContactPageIcon from '@mui/icons-material/ContactPage'
 import WidgetsIcon from '@mui/icons-material/Widgets'
 import WidgetsOutlinedIcon from '@mui/icons-material/WidgetsOutlined'
 
-const StyledSpeedDial = styled(SpeedDial)(({ theme }) => ({
-  // position: 'absolute',
-  // '&.MuiSpeedDial-directionUp, &.MuiSpeedDial-directionLeft': {
-  //   bottom: theme.spacing(-18),
-  //   right: theme.spacing(20),
-  // },
-  '&button': {
-    backgroundColor: '#75887E',
-  },
-}))
-
 const Spacer = styled(Box)({
   height: '50%',
   display: 'flex',
@@ -47,8 +36,8 @@ const NavMenu = () => {
     <Box sx={{ height: '100%', width: '20%' }}>
       <Spacer />
       <SpeedDialContainer>
-        <StyledSpeedDial
-          ariaLabel="SpeedDial playground example"
+        <SpeedDial
+          ariaLabel="Menu Navigation"
           icon={fabIcon}
           onOpen={() => setFabIcon(<WidgetsOutlinedIcon />)}
           onClose={() => setFabIcon(<WidgetsIcon />)}
@@ -57,7 +46,7 @@ const NavMenu = () => {
           {actions.map(action => (
             <SpeedDialAction key={action.name} icon={action.icon} arrow placement="right" tooltipTitle={action.name} />
           ))}
-        </StyledSpeedDial>
+        </SpeedDial>
       </SpeedDialContainer>
     </Box>
   )
