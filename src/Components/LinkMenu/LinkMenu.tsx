@@ -10,17 +10,6 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import TwitterIcon from '@mui/icons-material/Twitter'
 import ShareIcon from '@mui/icons-material/Share'
 
-const StyledSpeedDial = styled(SpeedDial)(({ theme }) => ({
-  // position: 'absolute',
-  // '&.MuiSpeedDial-directionUp, &.MuiSpeedDial-directionLeft': {
-  //   bottom: theme.spacing(-18),
-  //   right: theme.spacing(20),
-  // },
-  // '&.MuiSpeedDialAction-fabClosed, &.MuiSpeedDialAction-fab': {
-  //   backgroundColor: '#75887E',
-  // }
-}))
-
 const Spacer = styled(Box)({
   height: '50%',
 })
@@ -45,8 +34,8 @@ const LinkMenu = () => {
   return (
     <Box sx={{ height: '100%', width: '20%' }}>
       <SpeedDialContainer>
-        <StyledSpeedDial
-          ariaLabel="SpeedDial playground example"
+        <SpeedDial
+          ariaLabel="Social Media Links for Kevin Hartmann"
           icon={fabIcon}
           onOpen={() => setFabIcon(<LinkIcon />)}
           onClose={() => setFabIcon(<PhonelinkIcon />)}
@@ -64,7 +53,7 @@ const LinkMenu = () => {
               onClick={() => window.open(action.link, '_blank')}
             />
           ))}
-        </StyledSpeedDial>
+        </SpeedDial>
       </SpeedDialContainer>
       <Spacer />
     </Box>
