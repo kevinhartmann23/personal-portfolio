@@ -6,17 +6,14 @@ import Typewriter from 'typewriter-effect'
 import './AboutMe.css'
 
 const AboutContainer = styled(Box)({
-  height: '100 %',
-  width: '100%',
-  padding: '1rem',
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
-  justifyContent: 'space-between',
+  justifyContent: 'space-around',
 })
 
 const TextBox = styled(Box)({
-  height: '700px',
+  height: '70%',
   width: '100%',
   maxWidth: '700px',
   minWidth: '350px',
@@ -24,11 +21,16 @@ const TextBox = styled(Box)({
   padding: '1rem',
 })
 
+const TitleTypo = styled(Typography)({
+  textDecoration: 'underline',
+  textTransform: 'uppercase',
+})
+
 const AboutMe = () => {
   return (
     <AboutContainer className="typewriter-container">
-      <Box sx={{ height: '20%' }}>
-        <Typography variant="h1">About Me.</Typography>
+      <Box sx={{ height: 'auto', textAlign: 'center', alignItems: 'center' }}>
+        <TitleTypo variant="h3">About Me.</TitleTypo>
       </Box>
       <TextBox>
         <Typewriter
