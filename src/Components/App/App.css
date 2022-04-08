@@ -7,13 +7,3 @@
   flex-direction: row;
   justify-content: space-around;
 }
-
-.app-header {
-  height: 6vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: #262626;
-}
