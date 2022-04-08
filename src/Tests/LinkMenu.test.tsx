@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react'
-import NavMenu from './NavMenu'
+import LinkMenu from '../Components/LinkMenu/LinkMenu'
 
 test('renders learn react link', () => {
-  render(<NavMenu />)
+  render(<LinkMenu />)
 })

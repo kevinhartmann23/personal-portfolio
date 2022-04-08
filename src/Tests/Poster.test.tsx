@@ -1,8 +1,8 @@
 import { render } from '@testing-library/react'
-import Contact from './Contact'
+import Poster from '../Components/Poster/Poster'
 
 test('renders learn react link', () => {
-  render(<Contact />)
+  render(<Poster />)
   // const linkElement = screen.getByText(/learn react/i)
   // expect(linkElement).toBeInTheDocument()
 })

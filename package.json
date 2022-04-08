@@ -28,7 +28,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --coverage --watchAll --testPathIgnorePatterns",
     "eject": "react-scripts eject",
     "lint": "tslint \"src/**/*.{ts,tsx}\"",
     "lint:check": "tslint-config-prettier-check ./tslint.json",
@@ -38,7 +38,39 @@
   "eslintConfig": {
     "extends": [
       "react-app",
-      "react-app/jest"
+      "react-app/jest",
+      "eslint:recommended"
+    ],
+    "rules": {
+      "no-shadow": [
+        "warn",
+        {
+          "builtinGlobals": false,
+          "hoist": "functions",
+          "allow": []
+        }
+      ],
+      "require-await": "error",
+      "no-return-await": "error",
+      "no-await-in-loop": "warn",
+      "import/no-anonymous-default-export": 0,
+      "require-atomic-updates": "error",
+      "no-var": "error",
+      "prefer-const": [
+        "error",
+        {
+          "destructuring": "all"
+        }
+      ],
+      "array-callback-return": [
+        "error",
+        {
+          "checkForEach": true
+        }
+      ]
+    },
+    "ignorePatterns": [
+      "src/tests"
     ]
   },
   "browserslist": {
@@ -54,10 +86,15 @@
     ]
   },
   "devDependencies": {
+    "@types/jest-expect-message": "^1.0.3",
     "@types/react-router-dom": "^5.1.7",
     "@types/styled-components": "5.1.24",
     "husky": "^7.0.4",
+    "jest-expect-message": "^1.0.2",
+    "jest-extended": "^0.11.5",
+    "jest-watch-typeahead": "^0.6.5",
     "lint-staged": "^10.5.1",
+    "ts-jest": "^26.5.6",
     "tslint": "^6.1.3",
     "tslint-config-prettier": "^1.18.0",
     "tslint-plugin-prettier": "^2.3.0",
@@ -74,5 +111,15 @@
     "semi": false,
     "arrowParens": "avoid",
     "printWidth": 120
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "./Components/*.{js,jsx,ts,tsx}"
+    ],
+    "clearMocks": true,
+    "coverageReporters": [
+      "text",
+      "text-summary"
+    ]
   }
 }
